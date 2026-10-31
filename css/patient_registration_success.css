@@ -1,0 +1,367 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+:root {
+    --blue: #356df3;
+    --blue-dark: #2455d7;
+    --navy: #101b36;
+    --ink: #17233b;
+    --muted: #75819a;
+    --line: #e8edf5;
+    --green: #109b70;
+    --green-soft: #e7f8f0;
+    --page: #f3f6fc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(ellipse at 50% 0%, #e2ebff 0%, transparent 48%),
+        var(--page);
+    color: var(--ink);
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.page-wrapper {
+    max-width: 1120px;
+    padding: 24px;
+    margin: 0 auto;
+}
+
+/* Header */
+
+.brand-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    color: var(--navy);
+    text-decoration: none;
+    font: 800 23px 'Manrope', sans-serif;
+    letter-spacing: -0.7px;
+}
+
+.brand-icon {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    color: white;
+    background: linear-gradient(135deg, #5687ff, #2858e5);
+    border-radius: 12px;
+    box-shadow: 0 6px 16px #356df333;
+    font-size: 22px;
+}
+
+.header-label {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* Main card */
+
+.success-card {
+    max-width: 650px;
+    margin: 0 auto 35px;
+    padding: 38px clamp(20px, 5vw, 48px) 28px;
+    background: #ffffff;
+    border: 1px solid #e6ebf4;
+    border-radius: 23px;
+    box-shadow: 0 20px 60px #1c31520d;
+    text-align: center;
+}
+
+.success-icon {
+    display: grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 17px;
+    border-radius: 50%;
+    background: var(--green-soft);
+    color: var(--green);
+    font-size: 32px;
+    font-weight: 700;
+    box-shadow: 0 0 0 8px #e7f8f066;
+}
+
+.eyebrow {
+    margin-bottom: 8px;
+    color: var(--green);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+}
+
+h1,
+h2 {
+    font-family: 'Manrope', sans-serif;
+}
+
+h1 {
+    font-size: clamp(23px, 4vw, 30px);
+    line-height: 1.3;
+    letter-spacing: -0.8px;
+    font-weight: 800;
+}
+
+.subtitle {
+    max-width: 440px;
+    margin: 12px auto 25px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* Token display */
+
+.token-box {
+    padding: 25px 16px;
+    background: linear-gradient(145deg, #f0f5ff, #f8faff);
+    border: 1px dashed #8eafff;
+    border-radius: 17px;
+}
+
+.token-label {
+    display: block;
+    color: #657695;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.token {
+    margin: 8px 0 4px;
+    color: var(--blue);
+    font: 800 clamp(35px, 8vw, 49px) 'Manrope', sans-serif;
+    line-height: 1.25;
+    letter-spacing: 1px;
+    overflow-wrap: anywhere;
+}
+
+.token-help {
+    display: block;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.queue-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 18px;
+    padding: 7px 12px;
+    color: #94620a;
+    background: #fff4d8;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    background: #e5a51b;
+    border-radius: 50%;
+}
+
+/* Registration details */
+
+.details-section {
+    margin-top: 28px;
+    text-align: left;
+}
+
+.details-section h2 {
+    margin-bottom: 9px;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 13px 0;
+    border-bottom: 1px solid #edf0f6;
+}
+
+.detail-row span {
+    color: var(--muted);
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+.detail-row strong {
+    max-width: 65%;
+    color: var(--ink);
+    font-size: 12px;
+    font-weight: 700;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+.detail-row .waiting-text {
+    color: #b77908;
+}
+
+.last-row {
+    border-bottom: 0;
+}
+
+/* Buttons */
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 11px;
+    margin-top: 25px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 46px;
+    padding: 12px 18px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font: 700 12px 'DM Sans', sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.18s ease, transform 0.18s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn-primary {
+    color: #ffffff;
+    background: var(--blue);
+    box-shadow: 0 6px 15px #356df326;
+}
+
+.btn-primary:hover {
+    background: var(--blue-dark);
+}
+
+.btn-secondary {
+    color: #33425d;
+    background: #ffffff;
+    border-color: #dfe6f1;
+}
+
+.btn-secondary:hover {
+    background: #f7f9fd;
+}
+
+.dashboard-link {
+    margin-top: 3px;
+    color: var(--blue-dark);
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.dashboard-link:hover {
+    text-decoration: underline;
+}
+
+.footer-note {
+    margin-top: 27px;
+    padding-top: 18px;
+    border-top: 1px solid #edf0f6;
+    color: #97a1b3;
+    font-size: 11px;
+}
+
+/* Responsive */
+
+@media (max-width: 520px) {
+    .page-wrapper {
+        padding: 16px 12px;
+    }
+
+    .brand-header {
+        margin-bottom: 20px;
+    }
+
+    .brand {
+        font-size: 20px;
+    }
+
+    .header-label {
+        font-size: 10px;
+        text-align: right;
+    }
+
+    .success-card {
+        padding: 29px 19px 23px;
+        border-radius: 18px;
+    }
+
+    .detail-row {
+        gap: 12px;
+    }
+
+    .detail-row span,
+    .detail-row strong {
+        font-size: 11px;
+    }
+}
+
+/* Print only the registration card */
+
+@media print {
+    @page {
+        size: auto;
+        margin: 12mm;
+    }
+
+    body {
+        background: #ffffff;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .page-wrapper {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .brand-header {
+        margin-bottom: 18px;
+    }
+
+    .success-card {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        box-shadow: none;
+        border: 1px solid #d5dce8;
+    }
+
+    .button-group,
+    .footer-note {
+        display: none !important;
+    }
+}
